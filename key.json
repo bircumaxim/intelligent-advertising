@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "intelligent-advertising",
+  "private_key_id": "94d782fc9db75855a186414fba702836380cb757",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC1ykz5u9mUioWb\nPs7oeAnSS2Pnvb6k4Ef7gkgTtapyTqR00eRI5qSmtPgkxBMcYLNhxIBWZ+xmDzCH\n2QZKUHd3QeAiiCqmnu+RGSBtlVhvnw2VbH/H0/C5SK0e32XAdbstmZeQEZtJCXjk\n5yGRxAeNxcKu3DFTmqeA9kbCzF48Ws83G7B3GrPF2P5pz/EhhJGYABLTJ0s08Q0w\nChu85aDGjP+PR7HAekvzxU2B+WBfIv2uifoM8Ol5tyEnyzT7M3AzKBOAGVTfE4/e\n5w7AOQ+fprOoU4qzhn++RvurOY+in4eu4bQNqrlfWLByqAnl3fJPZNVR97So7DdM\njyi9fTCzAgMBAAECggEASiaWd1c0TO6jyMs5woEUIH835RL0bHQ/aEuf8sorGC0T\nz8K9hy7tAkLW5MhFs1GOWda5MoV5W7feZ8sSUcW4tSBduDgqjYRO27SQEaLVS9Jo\nzAZRqMS+cBVA6FLfQj3Dd7oqpE1KNeRzN4s/miGHo0CDRKf0RtHSeTv7aQHLfnos\nBP2FbSWTWktUGsIzNr//537kGop+rr7fjdnvg3ryzGhWsKY+biF56sQkJ/L8YM2k\nEPjdyqYW9fcwmjOLEdKOqVJU0hKZuMLnfJ5QKxIGaBCSlslKilhff6B94DBLDlfz\nK+6rTUk46e+elyomspD59pOCmA7vn805g889rm50wQKBgQDZZDmJF+uK6W/R4uKS\n39nEGt7hdVHLZ8NqpgbQqXrmqTs4xZXUz/rIjQRf7kBY+OAjPoAPu33CLLj2LL2P\nvzVaqrDBHgSJuwRhzSTrFRvrneSn2hx6Ynh7WbDh9vT8madwK4DepZ2N3heCBmnT\npYfcZi+Wo+4xm1zABquU/wBGOwKBgQDWE3Psgg1oOHkf54Nk/UKL1j3F53FujUTJ\nwfbBC5Qw1No7TkNvayfA4WPkiTJhMOtuKNGULBo6wn7aGmLnG5u1k8uTJ6t96/kc\n/UkfZzbeRQiK1bloJ/Zw89n26ml4bOGNpoaSkAm9WC9wx909wKBuyRfkINN3CXQa\nS0hsRdJ/6QKBgQDAx10yUrEBFbOgl6e/AZ12hzGhE82+KD0mJSckATdIt0gaNzWA\nbBMDp/H6NCiB/emdt34O9YA3Iju/qrtLbw+cYIOwLbNuhBcFt8sGYUjKL9GmfAgH\nC622DTqLl9l267eNBDcauhk2xn1oQ9Gy6zbI3yFSX/sJqLGeZAvibCPNIwKBgQC9\nZCBe0QADgFLIgw2fvt+szzF/cK7N23VL+anQR+om+WjIpwjJ/ccBwWWavjYv/hOL\nNdmUeSALdB693jI5vBcZoVOtMJ9rm+ScXQjgG3RTWEeibErHdvN0IohnBiOhQtKZ\newX7jCrRtL7jzC5Tf6Nv38CfNtteqKJq0MeV4n/EYQKBgQCP0ADMMew3xgqBV+6y\noGTIo4Toj1MJh3cxeEyNCFWDI8RKd2oLaq8IghYxafcltm4ZzoHi/1DvHFWul58S\nX22Eg8EyDo+yZlJ0qG+92lIEWFLnpa6z1l7eliZ5TA/Q1iB7H7F/fYZWLn2bzwsR\nMQegrSu719AHp08+IfM2zG3xzQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "vision@intelligent-advertising.iam.gserviceaccount.com",
+  "client_id": "100456947439453982104",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/vision%40intelligent-advertising.iam.gserviceaccount.com"
+}
