@@ -1,5 +1,5 @@
 var nodeWebCam = require("node-webcam");
-var defaultSettings = require("./src/camera/camera-settings");
+var defaultSettings = require("./camera-settings");
 
 module.exports = function (pictureReadyCallBack) {
     this.camera = nodeWebCam.create(defaultSettings);
