@@ -4,5 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node app.js"
+  },
+  "devDependencies": {
+    "node-webcam": "^0.4.3",
+    "webcamjs": "^1.0.23"
   }
 }
