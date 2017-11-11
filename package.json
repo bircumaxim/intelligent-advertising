@@ -6,6 +6,7 @@
     "start": "node index.js"
   },
   "devDependencies": {
+    "fluent-ffmpeg": "^2.1.2",
     "node-webcam": "^0.4.3",
     "webcamjs": "^1.0.23"
   },
