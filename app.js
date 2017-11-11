@@ -4,10 +4,6 @@ var test = new camera();
 
 setInterval(() => {
     test.takePhoto(() => {
-        detection("picture.jpg", (data) => {
-            console.log(data);
-        });
+        detection("picture.jpg", data => console.log(data))
     });
-
-
-}, 1000);
+}, 100);
