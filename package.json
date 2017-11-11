@@ -13,7 +13,8 @@
     "body-parser": "1.18.2",
     "fs": "0.0.1-security",
     "path": "0.12.7",
-    "youtube-dl": "1.12.2"
+    "youtube-dl": "1.12.2",
+    "ytdl-core": "0.18.1"
   },
   "main": "index.js",
   "repository": {
