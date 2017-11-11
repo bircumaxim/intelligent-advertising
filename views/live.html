@@ -16,19 +16,14 @@
 
     <script src="/socket.io/socket.io.js"></script>
     <script>
+        var datatable;
         var lastData = null;
         $(function () {
-            let datatable = $("#datatable tbody");
+            datatable = $("#datatable tbody");
             let labelsdatatable = $("#labelsdatatable tbody");
 
             var socket = io();
             socket.on('camdata', function (msg) {
-                datatable.html("");
-
-                for (var prop in msg.matchedProperties) {
-                    datatable.append("<tr><td>" + msg.matchedProperties[prop] + "</td></tr>")
-                }
-
 
                 labelsdatatable.html("");
 
@@ -37,7 +32,7 @@
                 }
 
                 if (!lastData) {
-                    startVideo(msg.id);
+                    startVideo(msg);
                 }
                 lastData = msg;
                 console.log(msg)
@@ -47,7 +42,7 @@
         // create youtube player
         var player;
 
-        function startVideo(videoId) {
+        function startVideo(data) {
 
             if (!!player) {
                 $("#player-container").html("<div id=\"player\"></div>");
@@ -56,12 +51,18 @@
             player = new YT.Player('player', {
                 width: "800",
                 height: "600",
-                videoId: videoId,
+                videoId: data.id,
                 events: {
                     onReady: onPlayerReady,
                     onStateChange: onPlayerStateChange
                 }
             });
+
+            datatable.html("");
+
+            for (var prop in data.matchedProperties) {
+                datatable.append("<tr><td>" + data.matchedProperties[prop] + "</td></tr>")
+            }
         }
 
         // autoplay video
@@ -74,7 +75,7 @@
             if (event.data === 0) {
                 console.log('done playing video, starting new');
                 if (!!lastData) {
-                    startVideo(lastData.id);
+                    startVideo(lastData);
                 }
             }
         }
