@@ -1,9 +1,28 @@
-var express = require('express')
-var app = express()
+var express = require('express');
+var path = require('path');
+var bodyParser = require('body-parser');
+var youtubedl = require('youtube-dl');
+var fs = require('fs');
+var app = express();
 
-// respond with "hello world" when a GET request is made to the homepage
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+
 app.get('/', function (req, res) {
-    res.send('hello world')
-})
+	res.sendFile(path.join(__dirname + '/views/index.html'));
+});
 
-app.listen(8080)
+app.post('/downloadVideo', async (req, res) => {
+	console.log(req.body);
+	let video = await youtubedl(req.body.url, ['--format=18'], {cwd: __dirname});
+	video.on('info', (info) => {
+		console.log('Download started');
+		console.log('size: ' + info.size);
+		video.pipe(fs.createWriteStream(info.filename));
+
+	});
+	res.status(200).json('okay');
+});
+
+app.listen(8080);

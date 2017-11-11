@@ -1,2 +1,2 @@
 var firebase = require('firebase');
-var app = firebase.initializeApp({ ... });
+var app = firebase.initializeApp({  });

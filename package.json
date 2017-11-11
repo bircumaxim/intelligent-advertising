@@ -11,6 +11,22 @@
   },
   "dependencies": {
     "@google-cloud/vision": "^0.12.0",
-    "express": "^4.16.2"
-  }
+    "body-parser": "1.18.2",
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "path": "0.12.7",
+    "youtube-dl": "1.12.2"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bircumaxim/intelligent-advertising.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bircumaxim/intelligent-advertising/issues"
+  },
+  "homepage": "https://github.com/bircumaxim/intelligent-advertising#readme"
 }
