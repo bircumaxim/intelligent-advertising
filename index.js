@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var youtubedl = require('youtube-dl');
 var fs = require('fs');
 var app = express();
+var getRawBody = require('raw-body');
+
 let detection = require("./detection");
 let maker = require("./screenshot-maker");
 let videoService = new (require("./video-service"))();
@@ -15,6 +17,31 @@ app.use(express.static(path.join(__dirname, '/views')));
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/views/index.html'));
+});
+
+
+app.post('/uploadLivePhoto', async (req, res) => {
+
+    getRawBody(req, {
+        length: req.headers['content-length'],
+        encoding: this.charset
+    }, function (err, string) {
+        if (err)
+            return next(err)
+
+
+        let path2 = __dirname+'/temp/received.jpg';
+        var wstream = fs.createWriteStream(path2);
+
+        wstream.write(string);
+        wstream.end();
+
+        detection(path2, (res) => {
+            videoService.getBestVideo(res, val => console.log(val))
+        });
+
+        console.log("File received")
+    })
 });
 
 app.post('/downloadVideo', async (req, res) => {
