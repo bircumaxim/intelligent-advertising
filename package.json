@@ -13,6 +13,21 @@
     "@google-cloud/vision": "^0.12.0",
     "express": "^4.16.2",
     "firebase": "^4.6.2",
-    "firebase-admin": "^5.5.0"
-  }
+    "firebase-admin": "^5.5.0",
+    "body-parser": "1.18.2",
+    "fs": "0.0.1-security",
+    "path": "0.12.7",
+    "youtube-dl": "1.12.2"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bircumaxim/intelligent-advertising.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bircumaxim/intelligent-advertising/issues"
+  },
+  "homepage": "https://github.com/bircumaxim/intelligent-advertising#readme"
 }

@@ -1,45 +1,45 @@
 module.exports = {
 
-    //Picture related
+	//Picture related
 
-    width: 1280,
+	width: 1280,
 
-    height: 720,
+	height: 720,
 
-    quality: 100,
-
-
-    //Delay to take shot
-
-    delay: 0,
+	quality: 100,
 
 
-    //Save shots in memory
+	//Delay to take shot
 
-    saveShots: true,
-
-
-    // [jpeg, png] support varies
-    // Webcam.OutputTypes
-
-    output: "jpeg",
+	delay: 0,
 
 
-    //Which camera to use
-    //Use Webcam.list() for results
-    //false for default device
+	//Save shots in memory
 
-    device: false,
+	saveShots: true,
 
 
-    // [location, buffer, base64]
-    // Webcam.CallbackReturnTypes
+	// [jpeg, png] support varies
+	// Webcam.OutputTypes
 
-    callbackReturn: "location",
+	output: "jpeg",
 
 
-    //Logging
+	//Which camera to use
+	//Use Webcam.list() for results
+	//false for default device
 
-    verbose: false
+	device: false,
+
+
+	// [location, buffer, base64]
+	// Webcam.CallbackReturnTypes
+
+	callbackReturn: "location",
+
+
+	//Logging
+
+	verbose: false
 
 };
