@@ -13,16 +13,12 @@ module.exports = function (imageSrc,callback) {
     };
 
     vision.labelDetection(image).then(response => {
-        var data = response[0].labelAnnotations.map(val => {
-            var obj = {
-                description : val.description,
-                score : val.score
-            };
-
-            return obj;
+        var result = {};
+        response[0].labelAnnotations.forEach(val => {
+            result[val.description] = val.score;
         });
 
-        callback(data);
+        callback(result);
     }).catch(err => {
             console.error(err);
     });

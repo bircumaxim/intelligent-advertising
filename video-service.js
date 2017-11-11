@@ -2,7 +2,8 @@ let firebase = new (require("./firebase-service"))();
 
 module.exports = function () {
     this.saveStatsForVideo = function (videoId, stats) {
-        firebase.set("/videodata/"+videoId,stats);
+        let nodeName = "/videodata/"+videoId;
+        firebase.set(nodeName,stats);
     };
 
     this.getBestVideo = function (currentImageStats, callback) {
