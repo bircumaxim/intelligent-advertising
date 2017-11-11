@@ -1,7 +1,9 @@
-var vision = require('@google-cloud/vision')({
+var visionlib = require('@google-cloud/vision');
+const vision = new visionlib({
     projectId: 'intelligent-advertising',
     keyFilename: 'key.json'
 });
+
 
 
 module.exports = function (imageSrc,callback) {

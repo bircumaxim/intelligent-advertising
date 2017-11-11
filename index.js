@@ -42,7 +42,7 @@ app.post('/uploadLivePhoto', async (req, res) => {
             return next(err)
 
 
-        let path2 = __dirname+'/temp/received.jpg';
+        let path2 = __dirname+'/temp/received'+Date.now()+'.bmp';
         var wstream = fs.createWriteStream(path2);
 
         wstream.write(string);
@@ -52,6 +52,7 @@ app.post('/uploadLivePhoto', async (req, res) => {
             videoService.getBestVideo(res, val => {
                 if (!!val.id)
                     io.emit("camdata", val);
+                fs.unlink(path2, () => {});
             })
         });
 
