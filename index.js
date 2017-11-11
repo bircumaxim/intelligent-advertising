@@ -5,6 +5,9 @@ var youtubedl = require('youtube-dl');
 var fs = require('fs');
 var app = express();
 var getRawBody = require('raw-body');
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
 
 let detection = require("./detection");
 let maker = require("./screenshot-maker");
@@ -17,6 +20,15 @@ app.use(express.static(path.join(__dirname, '/views')));
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/views/index.html'));
+});
+
+app.get('/live', function (req, res) {
+    res.sendFile(path.join(__dirname + '/views/live.html'));
+});
+
+
+io.on('connection', function(socket){
+    console.log('a user connected');
 });
 
 
@@ -37,7 +49,10 @@ app.post('/uploadLivePhoto', async (req, res) => {
         wstream.end();
 
         detection(path2, (res) => {
-            videoService.getBestVideo(res, val => console.log(val))
+            videoService.getBestVideo(res, val => {
+                if (!!val.id)
+                    io.emit("camdata", val);
+            })
         });
 
         console.log("File received")
@@ -110,4 +125,4 @@ function aggregate(coll, data) {
     }
 }
 
-app.listen(8000);
+http.listen(8000);
